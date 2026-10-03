@@ -30,9 +30,24 @@ public class CrearArchivo{
 
     //Este método es para crear el archivo directamente
     public static void main (String [] args){
+
+        Scanner lector = new Scanner(System.in);
+        System.out.print("Número de filas: ");
+        int filas = lector.nextInt();
+        System.out.print("Número de columnas: ");
+        int columnas = lector.nextInt();
+        System.out.print("Tamaño del vector: ");
+        int vector = lector.nextInt();
+        System.out.print("Tamaño de una página: " );
+        int tamPag = lector.nextInt();
+        System.out.print("Número de pasadas");
+        int numPasadas = lector.nextInt();
         try {
-            FileWriter archivo = new FileWriter("C:\\Users\\David.DESKTOP-A6NC9IE\\caso2\\direcciones.txt", true);
-            archivo.write("Esto es una prueba");
+            FileWriter archivo = new FileWriter("C:\\Users\\David.DESKTOP-A6NC9IE\\caso2\\direcciones.txt", false);
+            archivo.write("NF: " + filas + "\n");
+            archivo.write("NC: "+ columnas);
+
+
             archivo.close();
 
             System.out.println("Creado");
@@ -41,6 +56,7 @@ public class CrearArchivo{
             System.out.println("Error :c");
             e.printStackTrace();
         }    
+        lector.close();
         
     }
 

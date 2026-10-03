@@ -1,1 +1,2 @@
-Esto es una prueba
+NF: 1
+NC: 1
